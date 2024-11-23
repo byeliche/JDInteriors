@@ -1,6 +1,6 @@
 /* Shared Background for Header and Hero Section */
 .background-container {
-    background: url('Images/hero-bg.jpg') no-repeat center center/cover;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
     color: white;
 }
 
