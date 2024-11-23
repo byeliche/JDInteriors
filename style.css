@@ -1,7 +1,26 @@
-/* Shared Background for Header and Hero Section */
+/* Shared Background for Header and Hero Section with dark overlay */
+
 .background-container {
+    background-color: rgba(0,0,0,0.9);
     background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    position: relative;
     color: white;
+}
+
+.background-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* adjust the opacity to your liking */
+  }
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Header */
@@ -259,7 +278,6 @@ header ul li a {
 .cta-button .btn:hover {
     background-color: #ff9800;
 }
-
 
 /* Modal Styles */
 .modal {

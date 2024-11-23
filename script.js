@@ -7,8 +7,8 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 // Show the modal after 10 seconds
 setTimeout(() => {
     const modal = document.getElementById('get-in-touch-modal');
-    modal.style.display = 'flex';
-}, 10000); // 10000ms = 10 seconds
+    modal.style.display = 'flex'; // Show the modal
+}, 10000); // 10 seconds
 
 // Close the modal when the close button is clicked
 document.querySelector('.close-btn').addEventListener('click', () => {
@@ -16,7 +16,7 @@ document.querySelector('.close-btn').addEventListener('click', () => {
     modal.style.display = 'none';
 });
 
-// Optional: Close the modal if the user clicks outside the modal content
+// Close the modal if the user clicks outside the modal content
 window.addEventListener('click', (e) => {
     const modal = document.getElementById('get-in-touch-modal');
     if (e.target === modal) {
