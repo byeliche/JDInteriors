@@ -2,7 +2,7 @@
 setTimeout(() => {
     const modal = document.getElementById('get-in-touch-modal');
     modal.style.display = 'flex'; // Show the modal
-}, 10000);
+}, 20000);
 
 // Close the modal when the close button is clicked
 document.querySelector('.close-btn').addEventListener('click', () => {
