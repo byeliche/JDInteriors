@@ -1,14 +1,8 @@
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('Thank you for contacting us!');
-    this.reset();
-});
-
 // Show the modal after 10 seconds
 setTimeout(() => {
     const modal = document.getElementById('get-in-touch-modal');
     modal.style.display = 'flex'; // Show the modal
-}, 10000); // 10 seconds
+}, 10000);
 
 // Close the modal when the close button is clicked
 document.querySelector('.close-btn').addEventListener('click', () => {
@@ -30,5 +24,12 @@ document.getElementById('modal-get-in-touch-form').addEventListener('submit', fu
     alert('Thank you for getting in touch!');
     const modal = document.getElementById('get-in-touch-modal');
     modal.style.display = 'none'; // Close the modal after submission
+    this.reset(); // Reset the form fields
+});
+
+// Handle the contact form submission
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Thank you for contacting us!');
     this.reset(); // Reset the form fields
 });
