@@ -11,18 +11,30 @@
     <div class="background-container">
  <!-- Navigation Bar -->
 <header class="navbar">
-    <div class="logo">
+    <a href="#home" class="logo">
         <img src="images/logo.png" alt="JD Interiors Logo" class="logo-img"> JD INTERIORS
-    </div>
-    <nav>
+    </a>    
+
+    <!-- Hamburger Icon -->
+    <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
         <ul class="nav-links">
             <li><a href="#services">Our Services</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#get-in-touch-modal">Get in touch</a></li>
+            <li><a href="#get-in-touch-modal">Get in Touch</a></li>
         </ul>
     </nav>
+
+    <!-- Navbar Actions -->
     <div class="navbar-actions">
-        <a href="#contact" class="btn-book">Book Consultation</a>
+        <a href="book-consultation.html" class="btn-book">Book Consultation</a>
         <a href="https://wa.me/+918328253406" target="_blank" class="btn-whatsapp">
             <img src="icons/whatsapp-icon.png" alt="WhatsApp">
         </a>
@@ -39,7 +51,7 @@
     </div>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="services how-it-works">
         <h2 class="headings">Our Services</h2>
         <div class="service-list">
             <div class="service-item">
@@ -53,6 +65,10 @@
             <div class="service-item">
                 <img src="images/bedroom.jpg" alt="Bedroom Design">
                 <h3>Bedroom Design</h3>
+            </div>
+            <div class="service-item">
+                <img src="images/poojaroom.jpg" alt="Poojaroom Design">
+                <h3>Pooja Room Design</h3>
             </div>
         </div>
     </section>
@@ -177,8 +193,8 @@
     </div>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 JD Interiors. All rights reserved.</p>
+    <footer class="footer">
+        <p>&copy; 2024 JD Interiors. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>

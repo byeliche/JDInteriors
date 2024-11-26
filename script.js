@@ -2,7 +2,7 @@
 setTimeout(() => {
     const modal = document.getElementById('get-in-touch-modal');
     modal.style.display = 'flex'; // Show the modal
-}, 20000);
+}, 30000);
 
 // Close the modal when the close button is clicked
 document.querySelector('.close-btn').addEventListener('click', () => {
@@ -31,5 +31,17 @@ document.getElementById('modal-get-in-touch-form').addEventListener('submit', fu
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
     alert('Thank you for contacting us!');
+    this.reset(); // Reset the form fields
+});
+// JavaScript for Hamburger Menu Toggle
+document.querySelector('.hamburger').addEventListener('click', () => {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('active');
+});
+
+// Handle the form submission for Book Consultation
+document.getElementById('consultation-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Thank you for booking a consultation!');
     this.reset(); // Reset the form fields
 });

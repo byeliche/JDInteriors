@@ -13,21 +13,6 @@ body {
 }
 
 /* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white; /* Light navy blue */
-    padding: 10px 20px;
-    position: fixed; /* Fixed at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(52, 51, 51, 0.1);
-    color: white;
-}
-
 /* Logo */
 .logo {
     display: flex;
@@ -35,7 +20,7 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     color: tomato;
-    
+    text-decoration: none; /* Remove underline from the link */
 }
 
 .logo-img {
@@ -44,7 +29,51 @@ body {
     margin-right: 10px;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(52, 51, 51, 0.1);
+}
+
+
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
 /* Navigation Links */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -89,6 +118,57 @@ body {
     vertical-align: middle;
 }
 
+#book-consultation .contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#book-consultation h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Hamburger Menu */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .navbar-actions {
+        display: none; /* Navbar actions stay outside the hamburger menu */
+    }
+}
+
+
 /* Background Container */
 .background-container {
     margin-top: 60px; /* Space for the navbar */
@@ -123,6 +203,7 @@ body {
 }
 
 /* Services Section */
+
 .headings {
     margin-left: 15px;
     margin-top: 15px;
@@ -391,3 +472,12 @@ a{
     cursor: pointer;
     color: #333;
 }
+
+/*footer*/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+
